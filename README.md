@@ -42,15 +42,15 @@ cd /path/to/script && php -S 127.0.0.1:8000
 Дано 2 таблицы: payments и users. Ниже приведена структура этих таблиц:
 
 payments:
-	id INT(11) [key]
-	user_id INT(11) [foreign key from users.id]
-	amount DECIMAL(10,4)
+	id INT(11) [key];
+	user_id INT(11) [foreign key from users.id];
+	amount DECIMAL(10,4);
 
 users
-	id INT(11) [key]
-	game VARCHAR(45)
-	nickname VARCHAR(45)
-	level INT(11)
+	id INT(11) [key];
+	game VARCHAR(45);
+	nickname VARCHAR(45);
+	level INT(11);
 
 Написать SQL-запрос, который выведет игры, у которых есть хотя бы один такой игрок, у которого уровень больше 10 и сумма его платежей в эту игру превышает 100 у.е.
 Решение должно быть оформлено в виде одного файла с расширением sql.
