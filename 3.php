@@ -2,10 +2,8 @@
 	switch ($_SERVER['REQUEST_METHOD'])
 	{
 		case 'HEAD':
-			if(!empty($_GET["file"]))
-			{
-				if(file_exists($_GET["file"]))
-				{
+			if(!empty($_GET["file"])){
+				if(file_exists($_GET["file"])){
 					echo "Размер " .$_GET["file"]. ":".filesize($_GET["file"])." байт."; 
 				}
 				else
@@ -37,8 +35,7 @@
 		break;
 		case 'DELETE':
 			if(!empty($_GET["file"])){
-				if(file_exists($_GET["file"]))
-				{
+				if(file_exists($_GET["file"])){
 					if (unlink($_GET["file"])) 
 						echo "Файл удален.";
 					else echo "Ошибка удаления.";
