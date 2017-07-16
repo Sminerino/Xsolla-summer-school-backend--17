@@ -24,6 +24,4 @@ class MaximumUniqueSubstring
         return false;
     }
 }
-$b=new MaximumUniqueSubstring();
-echo $b->findMaximumUniqueSubstring("FffF");
 ?>
